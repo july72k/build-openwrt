@@ -1,11 +1,11 @@
 ①：修改此文件就会开启编译固件，随便修改，加个点，减个字，随便您改，改完保存就启动编译了，顺便也在这里随便写点说明，呵呵！ 
 
-②：选择要编译的固件在.github/workflows里面的build-openwrt.yml文件里面找到下面代码 
+②：选择要编译的固件在.github/workflows里面的build-openwrt.yml文件里面找到下面代码
     name: 编译 ${{matrix.target}}
     strategy:
       fail-fast: false
       matrix:
-        target: [Lienol_x86_64]
+        target: [Lede_x86_64]
    修改[Project_x86_64]里面的Project_x86_64为你需要编译的机型即可，如果没有你想编译的机型，就选用三个源码lede、Lienol、Project中的x86_64来编译
    编译的时候用SSH远程连接服务器修改配置就可以了。
  
